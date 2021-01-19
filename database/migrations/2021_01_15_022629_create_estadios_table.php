@@ -15,10 +15,10 @@ class CreateEstadiosTable extends Migration
     {
         Schema::create('estadios', function (Blueprint $table) {
             $table->id();
-            $table->string("descricao");
-            $table->string("time");
-            $table->string("jogo");
-            $table->string("local");
+            $table->string("Descricao");
+            $table->string("Time");
+            $table->string("Jogo");
+            $table->string("Local");
             $table->timestamps();
         });
     }
