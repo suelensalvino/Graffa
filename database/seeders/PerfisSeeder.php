@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Perfis;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class PerfisSeeder extends Seeder
@@ -13,6 +14,14 @@ class PerfisSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $users = User::all();
+
+        foreach ($users as $user) {
+
+        	Perfis::factory(6)->create([
+        		'user_id' => $user->id
+        	]);
+
+        }
     }
 }
