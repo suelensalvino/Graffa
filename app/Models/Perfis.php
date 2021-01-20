@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Perfis extends Model
 {
     use HasFactory;
+
+    public function estadios(){
+        return $this->hasMany(Estadios::class);
+    }
 }

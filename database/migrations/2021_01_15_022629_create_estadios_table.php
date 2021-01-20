@@ -19,6 +19,7 @@ class CreateEstadiosTable extends Migration
             $table->string("Time");
             $table->string("Jogo");
             $table->string("Local");
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
