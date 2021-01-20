@@ -18,6 +18,7 @@ class CreatePerfisTable extends Migration
             $table->string("ListaEstadios");
             $table->string("Time");
             $table->string("ListaJogos");
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
