@@ -23,6 +23,9 @@ class PerfisFactory extends Factory
     {
         return [
             //
+            'ListaEstadios' => $this->faker->word,
+            'Time' => $this->faker->word,
+            'ListaJogos' => $this->faker->word,
         ];
     }
 }
