@@ -26,6 +26,20 @@
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
+            <!-- Email Address -->
+            <div class="mt-4">
+                <x-label for="telefone" :value="__('Telefone')" />
+
+                <x-input id="telefone" class="block mt-1 w-full" type="text" name="telefone" :value="old('telefone')" required />
+            </div>
+
+            <!-- Email Address -->
+            <div class="mt-4">
+                <x-label for="regiao" :value="__('Região')" />
+
+                <x-input id="regiao" class="block mt-1 w-full" type="text" name="regiao" :value="old('regiao')" required />
+            </div>
+
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
