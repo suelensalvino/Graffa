@@ -6,17 +6,18 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                @foreach ($user->perfis as $perfil)
-                <div class="p-6 bg-white border-b border-gray-200">
-                    Jogo:
-                    {{ $perfil->ListaJogos }}
-                    <br>
-                    Estádio:
-                    {{$perfil->ListaEstadios }}
-                </div>
-                @endforeach
+        <div class="max-w-7xl mx-auto grid-cols-2 sm:px-6 lg:px-8">
+            <div>
+                <h1 class="bock text-center text-xl pb-3">Time do coração</h1>
+                @include('perfis')
+                
+            </div>
+            <br>
+            <div>
+                <h1 class="bock text-center text-xl pb-3">Estádios visitados</h1>
+                @include('estadios')
+
+            </div>
             </div>
         </div>
     </div>

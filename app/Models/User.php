@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function perfis(){
         return $this->hasMany(Perfis::class);
     }
+
+    public function estadios(){
+        return $this->hasMany(Estadios::class);
+    }
 }

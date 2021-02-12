@@ -9,7 +9,5 @@ class Perfis extends Model
 {
     use HasFactory;
 
-    public function estadios(){
-        return $this->hasMany(Estadios::class);
-    }
+    //
 }

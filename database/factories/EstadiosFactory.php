@@ -24,7 +24,7 @@ class EstadiosFactory extends Factory
         return [
             //
             'Descricao' => $this->faker->word,
-            'Time' => $this->faker->word,
+            'Nome' => $this->faker->word,
             'Jogo' => $this->faker->word,
             'Local' => $this->faker->word,
         ];

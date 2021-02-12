@@ -18,7 +18,7 @@ class PerfisSeeder extends Seeder
 
         foreach ($users as $user) {
 
-        	Perfis::factory(6)->create([
+        	Perfis::factory(1)->create([
         		'user_id' => $user->id
         	]);
 
