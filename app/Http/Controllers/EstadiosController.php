@@ -80,6 +80,8 @@ class EstadiosController extends Controller
      */
     public function destroy(Estadios $estadios)
     {
-        //
+        $estadios->delete();
+
+        return redirect('dashboard');
     }
 }

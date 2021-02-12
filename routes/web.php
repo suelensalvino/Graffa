@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-
+use \App\Http\Controllers\EstadiosController;
+use App\Models\Estadios;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,5 +21,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+Route::model('estadio', Estadios::class);
+Route::get('/estadios/remover/{estadio}', [EstadiosController::class, 'destroy'])->name('rm-estadio');
+
+require __DIR__.'/auth.php'; 
 
 require __DIR__.'/auth.php';
