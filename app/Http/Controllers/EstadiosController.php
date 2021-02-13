@@ -4,28 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Estadios;
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class EstadiosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +19,15 @@ class EstadiosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Estadios::create([
+            'Nome' => $request->Nome,
+            'Jogo' => $request->Jogo,
+            'Local' => $request->Local,
+            'Descricao' => $request->Descricao,
+            'user_id' => Auth::user()->id,
+        ]);
+
+        return redirect('dashboard');
     }
 
     /**

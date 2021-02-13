@@ -15,9 +15,9 @@ class CreatePerfisTable extends Migration
     {
         Schema::create('perfis', function (Blueprint $table) {
             $table->id();
-            $table->string("ListaEstadios");
+            $table->string("ListaEstadios")->nullable();
             $table->string("Time");
-            $table->string("ListaJogos");
+            $table->string("ListaJogos")->nullable();
             $table->integer('user_id');
             $table->timestamps();
         });

@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use \App\Http\Controllers\EstadiosController;
+use \App\Http\Controllers\PerfisController;
 use App\Models\Estadios;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +25,8 @@ Route::get('/', function () {
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 Route::model('estadio', Estadios::class);
 Route::get('/estadios/remover/{estadio}', [EstadiosController::class, 'destroy'])->name('rm-estadio');
+Route::post('/perfis/novo', [PerfisController::class, 'store'])->name('add-perfil');
+Route::post('/estadios/novo', [EstadiosController::class, 'store'])->name('add-estadio');
 
 require __DIR__.'/auth.php'; 
 

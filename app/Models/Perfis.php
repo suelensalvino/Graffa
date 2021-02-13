@@ -9,5 +9,15 @@ class Perfis extends Model
 {
     use HasFactory;
 
-    //
+    protected $fillable = [
+
+        'Time',
+        'user_id',
+
+    ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
 }

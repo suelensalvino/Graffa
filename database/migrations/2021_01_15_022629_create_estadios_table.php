@@ -15,7 +15,7 @@ class CreateEstadiosTable extends Migration
     {
         Schema::create('estadios', function (Blueprint $table) {
             $table->id();
-            $table->string("Descricao");
+            $table->string("Descricao")->nullable();
             $table->string("Nome");
             $table->string("Jogo");
             $table->string("Local");
